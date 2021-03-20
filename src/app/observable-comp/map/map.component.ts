@@ -21,7 +21,7 @@ export class MapComponent implements OnInit {
 
     // Ex- 01
     this.subs1 = broadcast.pipe(
-      map(data => //console.log(data)
+      map((data:number|string) => //console.log(data)
         data = "Video " + data
       )
     ).subscribe(res => {

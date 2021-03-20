@@ -1,0 +1,79 @@
+<div class="container">
+    <div class="my-3">
+        <h2>Filter
+        </h2>
+        <hr>
+        <br>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h3>Defination</h3>
+            <p class="text">
+            <strong>Filter :- </strong>
+            This operator will filter the values from source Observable based on the predicate function given.
+        </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <strong>Ex - 01</strong>
+            <hr>
+            <p class="bg-light py-2 px-3 border rounded">
+                <strong>Filter :</strong> By Length
+            </p>
+            <br>
+            <table>
+                <thead>
+                    <th>Id</th> 
+                    <th>Name</th>
+                </thead>
+                <tbody *ngFor="let i of data1">
+                    <td>{{i.id}}</td>
+                    <td>{{i.name}}</td>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-4">
+            <strong>Ex - 02</strong>
+            <hr>
+            <p class="bg-light py-2 px-3 border rounded">
+                <strong>Filter :</strong> By Gender
+            </p>
+            <br>
+            <table>
+                <thead>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Gender</th>
+                </thead>
+                <tbody *ngFor="let i of data2">
+                    <td>{{i.id}}</td>
+                    <td>{{i.name}}</td>
+                    <td>{{i.gender}}</td>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-4">
+            <strong>Ex - 03</strong>
+            <hr>
+            <p class="bg-light py-2 px-3 border rounded">
+                <strong>Filter :</strong> By nth items
+            </p>
+            <br>
+            <table>
+                <thead>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Gender</th>
+                </thead>
+                <tbody *ngFor="let i of data3">
+                    <td>{{i.id}}</td>
+                    <td>{{i.name}}</td>
+                    <td>{{i.gender}}</td>
+                </tbody>
+            </table>
+        </div>
+        
+        
+    </div>
+</div>
