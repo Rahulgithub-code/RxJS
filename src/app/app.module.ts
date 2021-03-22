@@ -20,6 +20,16 @@ import { FilterComponent } from './observable-comp/filter/filter.component';
 import { TapComponent } from './observable-comp/tap/tap.component';
 import { TakeComponent } from './observable-comp/take/take.component';
 import { RetryComponent } from './observable-comp/retry/retry.component';
+import { DebounceTimeComponent } from './observable-comp/debounce-time/debounce-time.component';
+import { LoadingBarModule } from '@ngx-loading-bar/core';
+import { SubjectComponent } from './observable-comp/subject/subject.component';
+import { Comp1Component } from './observable-comp/comp/comp1/comp1.component';
+import { Comp2Component } from './observable-comp/comp/comp2/comp2.component';
+import { Comp3Component } from './observable-comp/comp/comp3/comp3.component';
+import { ReplaySubjectComponent } from './observable-comp/replay-subject/replay-subject.component';
+import { AsyncSubjectComponent } from './observable-comp/async-subject/async-subject.component';
+import { ConcatComponent } from './observable-comp/concat/concat.component';
+import { MergeComponent } from './observable-comp/merge/merge.component';
 
 @NgModule({
   declarations: [
@@ -39,11 +49,21 @@ import { RetryComponent } from './observable-comp/retry/retry.component';
     FilterComponent,
     TapComponent,
     TakeComponent,
-    RetryComponent
+    RetryComponent,
+    DebounceTimeComponent,
+    SubjectComponent,
+    Comp1Component,
+    Comp2Component,
+    Comp3Component,
+    ReplaySubjectComponent,
+    AsyncSubjectComponent,
+    ConcatComponent,
+    MergeComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
+    LoadingBarModule,
     AppRoutingModule
   ],
   providers: [],

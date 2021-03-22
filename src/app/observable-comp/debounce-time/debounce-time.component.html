@@ -1,0 +1,47 @@
+<ngx-loading-bar></ngx-loading-bar>
+<div class="container">
+    <div class="my-3">
+        <h2>DebounceTime, DistinctUntilChanged
+        </h2>
+        <hr>
+        <br>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h3>Defination</h3>
+            <p class="text">
+                <strong>debounceTime() :- </strong>
+                The debounceTime operator is used to emit value from the source observable only after the time is complete
+            </p>
+
+            <p class="text">
+                <strong>distinctUntilChanged() :- </strong>
+                If a comparator function is provided, then it will be called for each item to test for whether or not that value should be emitted
+            </p>
+        </div>
+    </div>
+    <form class="form-group" >
+    <div class="row">
+        
+        <div class="col-md-6">
+            <div class="form-group">
+                <strong>Ex -01 <span class="text-primary">DebounceTime</span> </strong>
+              <hr>
+                <label >Search :</label>
+              <input type="text" #myInput1 class="form-control" placeholder="Search" >
+            </div> 
+            <span *ngIf="reqData!=null">Requested data : <strong class="text-success">{{reqData}}</strong></span>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <strong>Ex -02 <span class="text-primary">distinctUntilChanged</span> </strong>
+                <hr>
+                <label >Search 2:</label>
+                <input type="text" #myInput2 class="form-control" placeholder="Search 2" >
+              </div>
+              <span *ngIf="reqData2!=null">Requested data : <strong class="text-success">{{reqData2}}</strong></span>
+        </div>
+       
+    </div> </form>
+    
+</div>
