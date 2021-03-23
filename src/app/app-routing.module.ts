@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AsyncSubjectComponent } from './observable-comp/async-subject/async-subject.component';
+import { ConcatMapComponent } from './observable-comp/concat-map/concat-map.component';
+import { ConcatMap2Component } from './observable-comp/concat-map2/concat-map2.component';
 import { ConcatComponent } from './observable-comp/concat/concat.component';
 import { CustomObservableComponent } from './observable-comp/custom-observable/custom-observable.component';
 import { DebounceTimeComponent } from './observable-comp/debounce-time/debounce-time.component';
@@ -9,6 +11,7 @@ import { FromEventComponent } from './observable-comp/from-event/from-event.comp
 import { IntervalComponent } from './observable-comp/interval/interval.component';
 import { ListComponent } from './observable-comp/list/list.component';
 import { MapComponent } from './observable-comp/map/map.component';
+import { MergeMapComponent } from './observable-comp/merge-map/merge-map.component';
 import { MergeComponent } from './observable-comp/merge/merge.component';
 import { ObservableCompComponent } from './observable-comp/observable-comp.component';
 import { OfFromComponent } from './observable-comp/of-from/of-from.component';
@@ -42,7 +45,11 @@ const routes: Routes = [
       { path: 'replay-subject', component: ReplaySubjectComponent },
       { path: 'async-subject', component: AsyncSubjectComponent },
       { path: 'concat', component: ConcatComponent},
-      { path: 'merge', component: MergeComponent}
+      { path: 'merge', component: MergeComponent},
+      { path: 'merge-map', component: MergeMapComponent},
+      { path: 'concat-map', component:ConcatMapComponent },
+      { path: 'mobile-notifier', component: ConcatMap2Component }
+
     ]
   },
   { path: '**', redirectTo: 'promise' },
