@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { debounceTime, distinctUntilChanged, map, pluck } from 'rxjs/operators';
+import { LoadingBarService } from '@ngx-loading-bar/core';
+import { concatMap, debounceTime, distinctUntilChanged, filter, map, pluck, switchMap } from 'rxjs/operators';
 import { DesignUtilityService } from 'src/app/app-service/design-utility.service';
 
 @Component({
@@ -11,24 +12,31 @@ import { DesignUtilityService } from 'src/app/app-service/design-utility.service
 export class SwitchMap2Component implements AfterViewInit {
   @ViewChild('searchForm') searchForm: NgForm;
   data: any[];
-
-  constructor(private _du: DesignUtilityService) {
-    
+  searchResultCount:any;
+  constructor(private _du: DesignUtilityService , private loadingBar:LoadingBarService) {
   }
 
   ngAfterViewInit(): void {
-    this._du.getSearch().subscribe(res=> {
-      console.log(res);
-      
-    })
+    
     const formValue = this.searchForm.valueChanges;
     formValue?.pipe(
+      filter(() => this.searchForm.form.dirty),
       //map(data=> data['searchTerm'])
       pluck('searchTerm'),
       debounceTime(500),
-      distinctUntilChanged()
+      distinctUntilChanged(),
+      switchMap(data => this._du.getSearch(data))
     ).subscribe(res => { 
       console.log(res);
+      this.data = res
+      this.searchResultCount = Object.keys(res).length;
+      this.loadingBar.start();
+      console.log(this.data);
+      setTimeout(() => {
+      if(this.data){
+        this.loadingBar.stop();
+      }
+      });
     }
     )
   }

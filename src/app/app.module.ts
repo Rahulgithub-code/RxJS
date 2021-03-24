@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { FormsModule} from '@angular/forms'
 
 import { AppRoutingModule } from './app-routing.module';
-import { HttpClientModule} from '@angular/common/http'
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './include/header/header.component';
 import { FooterComponent } from './include/footer/footer.component';
@@ -36,6 +35,7 @@ import { ConcatMapComponent } from './observable-comp/concat-map/concat-map.comp
 import { ConcatMap2Component } from './observable-comp/concat-map2/concat-map2.component';
 import { SwitchMapComponent } from './observable-comp/switch-map/switch-map.component';
 import { SwitchMap2Component } from './observable-comp/switch-map2/switch-map2.component';
+import { HttpClientModule} from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -76,6 +76,7 @@ import { SwitchMap2Component } from './observable-comp/switch-map2/switch-map2.c
     HttpClientModule,
     LoadingBarModule,
     FormsModule,
+    HttpClientModule,
     AppRoutingModule
   ],
   providers: [],
