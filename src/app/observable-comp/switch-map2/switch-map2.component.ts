@@ -20,7 +20,7 @@ export class SwitchMap2Component implements AfterViewInit {
     
     const formValue = this.searchForm.valueChanges;
     formValue?.pipe(
-      filter(() => this.searchForm.form.dirty),
+      filter(() => this.searchForm.form.dirty),   //validation not working properly
       //map(data=> data['searchTerm'])
       pluck('searchTerm'),
       debounceTime(500),
