@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule} from '@angular/forms'
 
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule} from '@angular/common/http'
@@ -33,6 +34,8 @@ import { MergeComponent } from './observable-comp/merge/merge.component';
 import { MergeMapComponent } from './observable-comp/merge-map/merge-map.component';
 import { ConcatMapComponent } from './observable-comp/concat-map/concat-map.component';
 import { ConcatMap2Component } from './observable-comp/concat-map2/concat-map2.component';
+import { SwitchMapComponent } from './observable-comp/switch-map/switch-map.component';
+import { SwitchMap2Component } from './observable-comp/switch-map2/switch-map2.component';
 
 @NgModule({
   declarations: [
@@ -64,12 +67,15 @@ import { ConcatMap2Component } from './observable-comp/concat-map2/concat-map2.c
     MergeComponent,
     MergeMapComponent,
     ConcatMapComponent,
-    ConcatMap2Component
+    ConcatMap2Component,
+    SwitchMapComponent,
+    SwitchMap2Component
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     LoadingBarModule,
+    FormsModule,
     AppRoutingModule
   ],
   providers: [],

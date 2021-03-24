@@ -19,6 +19,8 @@ import { PluckComponent } from './observable-comp/pluck/pluck.component';
 import { ReplaySubjectComponent } from './observable-comp/replay-subject/replay-subject.component';
 import { RetryComponent } from './observable-comp/retry/retry.component';
 import { SubjectComponent } from './observable-comp/subject/subject.component';
+import { SwitchMapComponent } from './observable-comp/switch-map/switch-map.component';
+import { SwitchMap2Component } from './observable-comp/switch-map2/switch-map2.component';
 import { TakeComponent } from './observable-comp/take/take.component';
 import { TapComponent } from './observable-comp/tap/tap.component';
 import { ToArrayComponent } from './observable-comp/to-array/to-array.component';
@@ -44,12 +46,13 @@ const routes: Routes = [
       { path: 'subject', component: SubjectComponent },
       { path: 'replay-subject', component: ReplaySubjectComponent },
       { path: 'async-subject', component: AsyncSubjectComponent },
-      { path: 'concat', component: ConcatComponent},
-      { path: 'merge', component: MergeComponent},
-      { path: 'merge-map', component: MergeMapComponent},
-      { path: 'concat-map', component:ConcatMapComponent },
-      { path: 'mobile-notifier', component: ConcatMap2Component }
-
+      { path: 'concat', component: ConcatComponent },
+      { path: 'merge', component: MergeComponent },
+      { path: 'merge-map', component: MergeMapComponent },
+      { path: 'concat-map', component: ConcatMapComponent },
+      { path: 'mobile-notifier', component: ConcatMap2Component },
+      { path: 'switch-map', component: SwitchMapComponent },
+      { path: 'switch-map2', component: SwitchMap2Component }
     ]
   },
   { path: '**', redirectTo: 'promise' },
